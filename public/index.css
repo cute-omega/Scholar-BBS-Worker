@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+h1 {
+    margin: 0;
+    color: #333;
+}
+
+#posts {
+    margin-top: 20px;
+}
+
+.post {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.post h3 {
+    margin: 0;
+    color: #007BFF;
+}
+
+.post p {
+    margin: 5px 0;
+}
+
+.reply {
+    margin-left: 20px;
+    padding: 5px 0;
+    border-top: 1px solid #eee;
+}
+
+#pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#pagination button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#pagination button:hover {
+    background-color: #0056b3;
+}
+
+input[type="text"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 10px 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+textarea[id="postContent"] {
+    height: 8em;
+}
+
+textarea label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+button.commit {
+    display: block;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #pagination button {
+        padding: 8px 16px;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+
+    input[type="text"],
+    textarea {
+        width: calc(100% - 20px);
+    }
+}

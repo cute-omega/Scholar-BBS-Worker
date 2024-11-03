@@ -10,15 +10,16 @@
  *
  * Learn more at https://developers.cloudflare.com/workers/
  */
-
+import replies from "./replies";
+import posts from "./posts";
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
 		const url = new URL(request.url);
 		switch (url.pathname) {
-			case '/message':
-				return new Response('Hello, World!');
-			case '/random':
-				return new Response(crypto.randomUUID());
+			case '/posts':
+				return await posts.onRequest(request, env, ctx);
+			case '/replies':
+				return await replies.onRequest(request, env, ctx);
 			default:
 				return new Response('Not Found', { status: 404 });
 		}
